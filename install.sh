@@ -92,9 +92,9 @@ mkdir swiftnode
 cd ~/swiftnode/
 
 # Download the appropriate scripts
-wget https://raw.githubusercontent.com/swiftcashproject/swiftnode-installer/master/makerun.sh
-wget https://raw.githubusercontent.com/swiftcashproject/swiftnode-installer/master/checkdaemon.sh
-wget https://raw.githubusercontent.com/swiftcashproject/swiftnode-installer/master/clearlog.sh
+wget https://raw.githubusercontent.com/masterhash-us/swiftnode-installer/master/makerun.sh
+wget https://raw.githubusercontent.com/masterhash-us/swiftnode-installer/master/checkdaemon.sh
+wget https://raw.githubusercontent.com/masterhash-us/swiftnode-installer/master/clearlog.sh
 
 #install cpulimit
 apt-get install cpulimit -y
