@@ -32,6 +32,10 @@ done
 # printf "Press Ctrl+C to cancel or Enter to continue: "
 # read IGNORE
 
+apt-get update
+apt-get install -qqy curl
+clear
+
 # Get a new privatekey by going to console >> debug and typing swiftnode genkey
 printf "SwiftNode GenKey: "
 read _nodePrivateKey
@@ -93,7 +97,7 @@ wget https://raw.githubusercontent.com/swiftcashproject/swiftnode-installer/mast
 wget https://raw.githubusercontent.com/swiftcashproject/swiftnode-installer/master/clearlog.sh
 
 #install cpulimit
-apt install cpulimit -y
+apt-get install cpulimit -y
 
 # Create a cronjob for making sure swiftcashd runs after reboot
 if ! crontab -l | grep "@reboot swiftcashd"; then
