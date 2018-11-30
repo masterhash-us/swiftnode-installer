@@ -47,7 +47,7 @@ _rpcUserName=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 12 ; echo '')
 _rpcPassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 
 # Get the IP address of your vps which will be hosting the swiftnode
-_nodeIpAddress=$(curl -s 4.icanhazip.com)
+_nodeIpAddress=$(dig -4 @resolver1.opendns.com ANY myip.opendns.com +short)
 if [[ ${_nodeIpAddress} =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   external_ip_line="swiftnodeaddr=${_nodeIpAddress}:8544"
 else
